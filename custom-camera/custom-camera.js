@@ -72,11 +72,26 @@ customElements.define('custom-camera', class extends HTMLElement {
         return response.json()
       })
       .then(data => {
-        console.log(data.data);
-        const list = this.parentNode.querySelector('ul');
-        data.data.forEach((label) => {
+        if (data.data.length > 0) {
+          const list = this.parentNode.querySelector('ul');
+          data.data.forEach((label) => {
+            let listItem = document.createElement('li');
+            let node = document.createTextNode(label);
+            listItem.appendChild(node);
+
+            list.appendChild(listItem);
+            listItem.animate([
+              { opacity: 0 },
+              { opacity: 1 }
+            ], {
+              easing: 'ease-in',
+              duration: 500
+            });
+          });
+        } else {
+          const list = this.parentNode.querySelector('ul');
           let listItem = document.createElement('li');
-          let node = document.createTextNode(label);
+          let node = document.createTextNode('No landmark found');
           listItem.appendChild(node);
 
           list.appendChild(listItem);
@@ -87,7 +102,7 @@ customElements.define('custom-camera', class extends HTMLElement {
             easing: 'ease-in',
             duration: 500
           });
-        });
+        }
       })
       .catch(err => console.error(err));
       }

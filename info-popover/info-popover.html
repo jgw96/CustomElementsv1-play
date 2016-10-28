@@ -1,0 +1,36 @@
+<template id="popover-template">
+  <style>
+    div {
+      display: none;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      padding: 1rem;
+      opacity: 0;
+      z-index: 9999;
+      position: absolute;
+      background: white;
+      bottom: 20%;
+    }
+
+    button {
+      border: none;
+      position: absolute;
+      top: 20px;
+      right: 16px;
+      color: white;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      background: transparent;
+      font-family: serif;
+    }
+  </style>
+
+  <div>
+    <p>
+      LandmarkViewer allows you to take pictures of your
+      surroundings and will point out all the landmarks too you!
+    </p>
+  </div>
+
+  <button>I</button>
+</template>
+<script src="info-popover.js"></script>
