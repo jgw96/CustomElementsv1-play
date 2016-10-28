@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width">
     <title>LandmarkViewer</title>
 
+    <link rel="manifest" href="manifest.json">
+
+    <script>
+      navigator.serviceWorker.register('service-worker.js')
+        .then((registration) => {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }).catch((err) => {
+          console.log('ServiceWorker registration failed: ', err);
+        });
+    </script>
+
     <!-- Custom Elements -->
     <link rel="import" async href="custom-header/custom-header.html">
     <link rel="import" async href="custom-camera/custom-camera.html">
