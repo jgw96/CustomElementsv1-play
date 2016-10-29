@@ -57,7 +57,7 @@ customElements.define('custom-camera', class extends HTMLElement {
       context.drawImage(video, 0, 0, canvas.width, canvas.height);
 
       const imageData = canvas.toDataURL('image/jpg');
-      fetch('http://localhost:8080/label', {
+      fetch('https://glacial-forest-35899.herokuapp.com/label', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
