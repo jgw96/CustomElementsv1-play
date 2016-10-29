@@ -41,6 +41,7 @@ customElements.define('custom-camera', class extends HTMLElement {
         let elements = this.parentNode.querySelectorAll('li');
         elements.forEach((item) => {
           let animation = item.animate([
+            { transform: 'translateX(0)' },
             { transform: 'translateX(110%)' }
           ], {
             duration: 700,
