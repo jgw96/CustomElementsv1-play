@@ -46,6 +46,7 @@ customElements.define('info-popover', class extends HTMLElement {
     animation.onfinish = () => {
       setTimeout(() => {
         const outAnimation = popover.animate([
+          { transform: 'translateY(0)' },
           { transform: 'translateY(110%)' }
         ], {
           easing: 'ease-out',
