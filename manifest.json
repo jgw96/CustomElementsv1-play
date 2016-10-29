@@ -1,0 +1,15 @@
+{
+  "short_name": "Landmark",
+  "name": "LandmarkViewer",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#3F51B5",
+  "theme_color": "#3F51B5"
+}

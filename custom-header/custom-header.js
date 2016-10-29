@@ -9,8 +9,4 @@ customElements.define('custom-header', class extends HTMLElement {
     this._root = this.attachShadow({ mode: 'open' });
     this._root.appendChild(tmpl.content.cloneNode(true));
   }
-
-  connectedCallback() {
-    console.log('custom header in the dom');
-  }
 });

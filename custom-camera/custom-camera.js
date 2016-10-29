@@ -19,7 +19,6 @@ customElements.define('custom-camera', class extends HTMLElement {
     };
 
     navigator.mediaDevices.getUserMedia(constraints).then((mediaStream) => {
-      console.log(mediaStream);
       this.root.querySelector('video').src = window.URL.createObjectURL(mediaStream);
     }).catch((err) => {
       console.error(err);

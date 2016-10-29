@@ -9,3 +9,10 @@ body {
   bottom: 16px;
   right: 16px;
 }
+
+paper-icon-button {
+  color: white;
+  position: absolute !important;
+  top: 13px;
+  right: 16px;
+}
